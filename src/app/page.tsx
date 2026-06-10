@@ -1,3 +1,4 @@
+import { GoldenDust } from "@/components/global/GoldenDust";
 import { DoctorSection } from "@/components/landing/DoctorSection";
 import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
 import { FloatingCta } from "@/components/landing/FloatingCta";
@@ -11,7 +12,9 @@ import { TransformationSection } from "@/components/landing/TransformationSectio
 
 export default function Page() {
     return (
-        <main className="min-h-dvh overflow-hidden bg-background text-foreground">
+        <main className="relative min-h-dvh overflow-hidden bg-background text-foreground">
+            <GoldenDust />
+
             <FloatingHeader />
             <FloatingCta />
 
