@@ -146,6 +146,9 @@ export function FooterSection() {
                                 © {new Date().getFullYear()} Dra. Priscilla Henriques. Todos os
                                 direitos reservados.
                             </p>
+                            <p className="text-xs text-[#F5EFE6]/28">
+                                Desenvolvido por Marco Tullio França
+                            </p>
                         </div>
                     </motion.div>
                 </div>
