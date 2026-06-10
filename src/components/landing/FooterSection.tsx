@@ -5,9 +5,7 @@ import { motion } from "motion/react";
 import { MapPin, MessageCircle, MonitorCheck, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {siInstagram} from "simple-icons";
-
-const whatsappUrl = "https://wa.me/5500000000000";
-const instagramUrl = "https://www.instagram.com/drapriscillahenriques?igsh=MWg2M3R4azYxODZwMQ==";
+import { siteLinks } from "@/lib/links";
 
 const trustItems = [
     "Atendimento presencial",
@@ -69,10 +67,10 @@ export function FooterSection() {
 
                 <div className="premium-container">
                     <motion.div
-                        initial={{ opacity: 0, y: 18 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
+                        initial={{opacity: 0, y: 18}}
+                        whileInView={{opacity: 1, y: 0}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.7}}
                         className="mx-auto max-w-4xl text-center"
                     >
                         <p className="font-heading text-3xl font-semibold leading-tight tracking-[-0.025em] text-ivory sm:text-4xl">
@@ -95,15 +93,23 @@ export function FooterSection() {
                             longevidade, qualidade de vida e cuidado individualizado.
                         </p>
 
+                        <p className="mt-3 text-xs uppercase tracking-[0.22em] text-champagne/70">
+                            Atendimento presencial e telemedicina para todo o Brasil
+                        </p>
+
                         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                             <Button
                                 asChild
                                 variant="outline"
                                 className="h-10 rounded-full border-champagne/20 bg-white/[0.03] px-5 text-xs text-champagne hover:bg-champagne/10 hover:text-champagne"
                             >
-                                <a href={whatsappUrl} target="_blank" rel="noreferrer">
-                                    <MessageCircle className="size-4" />
-                                    WhatsApp
+                                <a
+                                    href={siteLinks.consultationOnline}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <MessageCircle className="size-4"/>
+                                    Consulta Online
                                 </a>
                             </Button>
 
@@ -112,26 +118,46 @@ export function FooterSection() {
                                 variant="outline"
                                 className="h-10 rounded-full border-champagne/20 bg-white/[0.03] px-5 text-xs text-champagne hover:bg-champagne/10 hover:text-champagne"
                             >
-                                <a href={instagramUrl} target="_blank" rel="noreferrer">
-                                    <InstagramIcon className="size-4" />
+                                <a
+                                    href={siteLinks.clinicWhatsapp}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <MapPin className="size-4"/>
+                                    Clínica Alphaview
+                                </a>
+                            </Button>
+
+                            <Button
+                                asChild
+                                variant="outline"
+                                className="h-10 rounded-full border-champagne/20 bg-white/[0.03] px-5 text-xs text-champagne hover:bg-champagne/10 hover:text-champagne"
+                            >
+                                <a
+                                    href={siteLinks.instagram}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <InstagramIcon className="size-4"/>
                                     Instagram
                                 </a>
                             </Button>
                         </div>
 
-                        <div className="mt-10 grid gap-4 border-t border-white/10 pt-8 text-xs text-ivory/48 sm:grid-cols-3">
+                        <div
+                            className="mt-10 grid gap-4 border-t border-white/10 pt-8 text-xs text-ivory/48 sm:grid-cols-3">
                             <div className="flex items-center justify-center gap-2">
-                                <MapPin className="size-4 text-champagne/70" />
-                                São Paulo • Brasil
+                                <MapPin className="size-4 text-champagne/70"/>
+                                Alphaville • São Paulo
                             </div>
 
                             <div className="flex items-center justify-center gap-2">
-                                <MonitorCheck className="size-4 text-champagne/70" />
+                                <MonitorCheck className="size-4 text-champagne/70"/>
                                 Presencial e telemedicina
                             </div>
 
                             <div className="flex items-center justify-center gap-2">
-                                <ShieldCheck className="size-4 text-champagne/70" />
+                                <ShieldCheck className="size-4 text-champagne/70"/>
                                 CRM-SP 276652
                             </div>
                         </div>

@@ -1,5 +1,7 @@
 import { DoctorSection } from "@/components/landing/DoctorSection";
 import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
+import { FloatingCta } from "@/components/landing/FloatingCta";
+import { FloatingHeader } from "@/components/landing/FloatingHeader";
 import { FooterSection } from "@/components/landing/FooterSection";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { MethodSection } from "@/components/landing/MethodSection";
@@ -10,6 +12,9 @@ import { TransformationSection } from "@/components/landing/TransformationSectio
 export default function Page() {
     return (
         <main className="min-h-dvh overflow-hidden bg-background text-foreground">
+            <FloatingHeader />
+            <FloatingCta />
+
             <HeroSection />
             <SymptomsSection />
             <MethodSection />

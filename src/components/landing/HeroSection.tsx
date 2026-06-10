@@ -14,12 +14,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { siteLinks } from "@/lib/links";
 
-function InstagramIcon({
-                           className = "",
-                       }: {
-    className?: string;
-}) {
+function InstagramIcon({ className = "" }: { className?: string }) {
     return (
         <svg
             role="img"
@@ -31,35 +28,16 @@ function InstagramIcon({
         </svg>
     );
 }
-const instagramUrl = "https://www.instagram.com/drapriscillahenriques?igsh=MWg2M3R4azYxODZwMQ==";
 
 const stats = ["CRM-SP 276652", "Menopausa", "Metabolismo", "Longevidade"];
 
 const pillars = [
-    {
-        icon: Activity,
-        title: "Saúde hormonal",
-    },
-    {
-        icon: Scale,
-        title: "Emagrecimento e metabolismo",
-    },
-    {
-        icon: Sprout,
-        title: "Saúde intestinal",
-    },
-    {
-        icon: Flower2,
-        title: "Longevidade",
-    },
-    {
-        icon: Brain,
-        title: "Performance cognitiva",
-    },
-    {
-        icon: TrendingUp,
-        title: "Resultados sustentáveis",
-    },
+    { icon: Activity, title: "Saúde hormonal" },
+    { icon: Scale, title: "Emagrecimento e metabolismo" },
+    { icon: Sprout, title: "Saúde intestinal" },
+    { icon: Flower2, title: "Longevidade" },
+    { icon: Brain, title: "Performance cognitiva" },
+    { icon: TrendingUp, title: "Resultados sustentáveis" },
 ];
 
 export function HeroSection() {
@@ -119,7 +97,7 @@ export function HeroSection() {
                             className="size-9 rounded-full border-champagne/25 bg-white/[0.03] text-champagne hover:bg-champagne/10 hover:text-champagne"
                         >
                             <a
-                                href={instagramUrl}
+                                href={siteLinks.instagram}
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label="Instagram Dra. Priscilla Henriques"
@@ -133,7 +111,13 @@ export function HeroSection() {
                             size="sm"
                             className="hidden h-9 rounded-full bg-champagne px-6 text-xs font-semibold text-emerald-deep hover:bg-champagne/90 md:inline-flex"
                         >
-                            <a href="#agendar">Agendar consulta</a>
+                            <a
+                                href={siteLinks.consultationOnline}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Agendar consulta
+                            </a>
                         </Button>
                     </motion.div>
                 </header>
@@ -167,7 +151,11 @@ export function HeroSection() {
                                 asChild
                                 className="group h-10 rounded-full bg-champagne px-6 text-sm font-semibold text-emerald-deep shadow-[0_0_36px_rgba(216,196,163,0.2)] hover:bg-champagne/90"
                             >
-                                <a href="#agendar">
+                                <a
+                                    href={siteLinks.consultationOnline}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                     Agendar consulta
                                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                                 </a>
@@ -263,10 +251,7 @@ export function HeroSection() {
                                     className="group flex flex-col items-center text-center"
                                 >
                                     <div className="mb-4 flex size-14 items-center justify-center rounded-full border border-champagne/15 bg-white/[0.025] transition duration-300 group-hover:border-champagne/35 group-hover:bg-champagne/10">
-                                        <Icon
-                                            strokeWidth={1.25}
-                                            className="size-8 text-champagne"
-                                        />
+                                        <Icon strokeWidth={1.25} className="size-8 text-champagne" />
                                     </div>
 
                                     <p className="max-w-[132px] text-[10px] font-medium uppercase leading-5 tracking-[0.16em] text-ivory/76">

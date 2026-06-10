@@ -3,17 +3,11 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import { siInstagram } from "simple-icons";
 import { Button } from "@/components/ui/button";
-import {siInstagram} from "simple-icons";
+import { siteLinks } from "@/lib/links";
 
-const whatsappUrl = "https://wa.me/5500000000000";
-const instagramUrl = "https://www.instagram.com/";
-
-function InstagramIcon({
-                           className = "",
-                       }: {
-    className?: string;
-}) {
+function InstagramIcon({ className = "" }: { className?: string }) {
     return (
         <svg
             role="img"
@@ -34,13 +28,13 @@ export function FinalCtaSection() {
         >
             <div className="absolute inset-0 -z-10">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(216,196,163,0.16),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(22,49,54,0.72),transparent_34%),linear-gradient(180deg,#061012_0%,#081112_48%,#030707_100%)]" />
+
                 <Image
-                    src="/priscilla/bg-leaves.png"
+                    src="/priscilla/backfiodeouro.png"
                     alt=""
                     fill
-                    className="object-cover opacity-[0.075] mix-blend-screen"
+                    className="object-cover opacity-[0.08] mix-blend-screen"
                 />
-
             </div>
 
             <div className="premium-container">
@@ -77,9 +71,13 @@ export function FinalCtaSection() {
                                 asChild
                                 className="group h-11 rounded-full bg-champagne px-7 text-sm font-semibold text-emerald-deep shadow-[0_0_42px_rgba(216,196,163,0.24)] hover:bg-champagne/90"
                             >
-                                <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                                <a
+                                    href={siteLinks.consultationOnline}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                     <MessageCircle className="size-4" />
-                                    Agendar consulta
+                                    Agendar consulta online
                                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                                 </a>
                             </Button>
@@ -89,7 +87,11 @@ export function FinalCtaSection() {
                                 variant="outline"
                                 className="h-11 rounded-full border-white/15 bg-white/[0.03] px-7 text-sm text-ivory hover:bg-white/10 hover:text-ivory"
                             >
-                                <a href={instagramUrl} target="_blank" rel="noreferrer">
+                                <a
+                                    href={siteLinks.instagram}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                     <InstagramIcon className="size-4" />
                                     Acompanhar no Instagram
                                 </a>
